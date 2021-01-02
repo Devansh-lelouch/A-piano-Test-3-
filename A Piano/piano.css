@@ -1,0 +1,62 @@
+*,*::before,*::after{
+    box-sizing: border-box;
+}
+body{
+    background-color: rgb(206, 29, 206);
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+
+}
+.piano{
+    display: flex;
+    
+    margin-left: 60px; 
+    
+}
+.key{
+    height: calc(var(--width)*4);
+    width: var(--width);
+    
+}
+h1{
+    margin: 0;
+
+
+}
+.white{
+   --width: 100px;
+    
+    background-color: white;
+    border: black 1px solid;
+
+}
+.white h1{
+    color: black;
+    position: fixed;
+   bottom: calc(var(--width)*2.2);
+   margin-left: 40px;
+}
+.white.active{
+ background-color: grey;
+}
+.black{
+    --width: 60px;
+   
+    margin-left: calc(var(--width)/-2);
+    margin-right: calc(var(--width)/-2);
+   background-color:black;
+  z-index: 2;
+  
+}
+.black h1{
+   color: rgb(228, 222, 222);
+   position: fixed;
+   bottom: calc(var(--width)*6);
+   margin-left: 10px;
+}
+.black.active{
+    background-color: grey;
+}
